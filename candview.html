@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Candidate</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="materialize/js/jquery-2.1.4.min.js"></script>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> -->
+    <script type="text/javascript" src="materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+       
+    </script>
+    <style type="text/css">
+    body{
+      padding: 0px;
+      margin: 0px;
+    }
+      .tabs .tab a{
+        color: #ECEFF1;
+        text-decoration: none;
+
+      }
+      .tabs .tab a:hover {
+        color: #FFC107;
+
+      }
+      .tabs .tab a.active {
+        color: #FFC107;
+
+      }
+      a{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      .tabs .indicactor{
+        height: 5px;
+        background: #FFC107;
+      }
+      
+      .row .col {
+        padding: 0;
+      }
+      .container{
+        width: 30%;
+        margin-top: 10%;
+      }
+      table{
+
+        width: 60%;
+      }
+      #publication .container{
+        margin-top: 10%;
+      }
+      #cont{
+        margin-top: 3%;
+      }
+      nav .brand-logo{
+        padding:0% 2%; 
+      }
+       #logout:hover{
+        color: #FFC107;
+
+      }
+      #logout{
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper blue-grey ">
+      <a href="#" class="brand-logo">SASTRA UNIVERSITY</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a  id="logout" href="./logout.php">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="row">
+    <div class="col s12">
+      <ul class="tabs blue-grey">
+        <li class="tab col s3"><a href="#coontainer" class="active">Personal Details</a></li>
+        <li class="tab col s3"><a href="#course">Course Work</a></li>
+        <li class="tab col s3"><a href="#comment">Comments</a></li>
+        <li class="tab col s3"><a href="#meeting">Meetings</a></li>
+      </ul>
+    </div>
+    </div>
+    <div id="coontainer">
+    <div class="section ">
+   
+    <div class="row container z-depth-1">
+     
+        <form class="col s12">
+    
+	   <table align="center">
+      <tr><td><p class="black-text"><strong><b>Name</b></strong></p></td><td><p id="name"></p></td></tr> 
+      <tr><td><p class="black-text"><strong><b>Email</b></strong></p></td><td><p id="email"></p></td></tr>
+      <tr><td><p class="black-text"><strong><b>Designation</b></strong></p></td><td><p id="designation"></p></td></tr> 
+      <tr><td><p class="black-text"><strong><b>School</b></strong></p></td><td><p id="qualification"></p></td></tr>    
+     </table>
+
+      
+    
+    </form>
+
+    </div>
+    </div>
+    
+    </div>
+     
+    
+   
+    
+    <div id="comment">
+    	
+        <div class="section ">   
+          <div class="row container z-depth-0" id="cont">     
+            <form class="col s12">
+            <div id="comments">
+            </div>
+          </form>
+          </div>
+          
+          </div>
+          </div>
+    <div id="meeting">
+      <div class="section ">   
+          <div class="row container z-depth-0" id="cont">     
+            <form class="col s12">
+            <div id="meetings">
+            </div>
+          </form>
+          </div>
+          
+          </div>
+          </div>
+    </div>
+    
+
+</body>
+</html>

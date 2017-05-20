@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Staff</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="js/staffprofile.js"></script>
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+       
+    </script>
+    <style type="text/css">
+    body{
+      padding: 0px;
+      margin: 0px;
+    }
+      .tabs .tab a{
+        color: #ECEFF1;
+        text-decoration: none;
+
+      }
+      .tabs .tab a:hover {
+        color: #FFC107;
+
+      }
+      .tabs .tab a.active {
+        color: #FFC107;
+
+      }
+      a{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      .tabs .indicactor{
+        height: 5px;
+        background: #FFC107;
+      }
+      
+      .row .col {
+        padding: 0;
+      }
+      .container{
+        width: 30%;
+        margin-top: 10%;
+      }
+      table{
+
+        width: 60%;
+      }
+      #publication .container{
+        margin-top: 10%;
+      }
+      #cont{
+        margin-top: 3%;
+      }
+      nav .brand-logo{
+        padding:0% 2%; 
+      }
+       #logout:hover{
+        color: #FFC107;
+
+      }
+      #logout{
+        text-decoration: none;
+      }
+      .modal  .modal-content{
+          height: 100%;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-wrapper blue-grey ">
+      <a href="#" class="brand-logo">SASTRA UNIVERSITY</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a  id="logout" href="./logout.php">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="row">
+    <div class="col s12">
+      <ul class="tabs blue-grey ">
+        <li class="tab col s3"><a href="#coontainer" class="active">Personal Details</a></li>             
+        <li class="tab col s3"><a href="#canditates">Candidates</a></li>
+        <li class="tab col s3"><a href="#comments">Comments</a></li>
+      </ul>
+    </div>
+</div>
+    <div id="coontainer">
+    <div class="section ">
+   
+    <div class="row container z-depth-1">
+     
+        <form class="col s12">
+    
+     <table align="center">
+      <tr><td><p class="black-text"><strong><b>Name</b></strong></p></td><td><p id="name"></p></td></tr> 
+      <tr><td><p class="black-text"><strong><b>Email</b></strong></p></td><td><p id="email"></p></td></tr>
+      <tr><td><p class="black-text"><strong><b>Designation</b></strong></p></td><td><p id="designation"></p></td></tr> 
+      <tr><td><p class="black-text"><strong><b>Qualification</b></strong></p></td><td><p id="qualification"></p></td></tr> 
+      <tr><td><p class="black-text"><strong><b>School</b></strong></p></td><td><p id="school"></p></td></tr>  
+     </table>
+
+      
+    
+    </form>
+
+    </div>
+    </div>
+    
+    </div>
+     
+    <div id="approvals">
+    	<div class="section ">   
+          <div class="row container z-depth-0" id="cont">     
+            <form class="col s12">
+            <div id="comments2">
+            </div>
+          </form>
+          </div>
+          
+          </div>
+    </div>
+    <div id="canditates">
+      <div class="section ">   
+          <div class="row container z-depth-0" id="cont">     
+            <form class="col s12">
+            <div id="candidates">
+            </div>
+          </form>
+          </div>
+          
+          </div>
+    </div>
+    <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Comment</h4>
+      <p id="commentto"><strong></strong></p>
+      <div class="row">
+        <div class="row">
+        <div class="input-field col s12">
+          <textarea id="message" class="materialize-textarea"></textarea>
+          <label for="message">Textarea</label>
+        </div>
+      </div>
+      </div>
+      <button class="btn waves-effect waves-light right" type="button" name="actionSend">Send
+    <i class="material-icons right">send</i>
+  </button>
+    </div>
+    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Meeting</h4>
+      <div class="input-field col s6">
+          <input id="commentto1" type="text" class="validate">
+          <label for="commentto1">Meeting for</label>
+        </div>
+      <div class="input-field col s6">
+          <input id="internal_1" type="text" class="validate">
+          <label for="internal_1">Internal 1</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="internal_2" type="text" class="validate">
+          <label for="internal_2">Internal 2</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="external_1" type="text" class="validate">
+          <label for="external_1">External 1</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="external_2" type="text" class="validate">
+          <label for="external_2">External 2</label>
+        </div>
+        <div class="row">
+          <input type="date" class="datepicker" id="date" placeholder="Meeting Date">
+        </div>
+      <button class="btn waves-effect waves-light right" type="button" name="actionMeetSend">Send
+    <i class="material-icons right">send</i>
+  </button>
+    </div>
+    </div>
+    <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>Course Work</h4>
+      <div class="input-field col s6">
+          <input id="subject1" type="text" class="validate">
+          <label for="subject1">Subject1</label>
+        </div>
+      <div class="input-field col s6">
+          <input id="subject2" type="text" class="validate">
+          <label for="subject2">Subject2</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="subject3" type="text" class="validate">
+          <label for="subject3">Subject3</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="subject4" type="text" class="validate">
+          <label for="subject4">Subject4</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="subject5" type="text" class="validate">
+          <label for="subject5">Subject5</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="subject6" type="text" class="validate">
+          <label for="subject6">Subject6</label>
+        </div>
+        
+      <button class="btn waves-effect waves-light right" type="button" name="actionCourseUpload">Send
+    <i class="material-icons right">send</i>
+  </button>
+    </div>
+    </div>
+  
+</body>
+</html>

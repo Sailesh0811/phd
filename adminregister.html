@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Staff Registration</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
+</head>
+<body>
+	<div class="row">
+		    <div class="input-field col s6">
+          <input id="name" type="text" class="validate">
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field col s6">
+          <select id="designation">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="Student">Student</option>
+            <option value="AP-1">AP-1</option>
+            <option value="AP-2">AP-2</option>
+            <option value="AP-3">AP-3</option>
+            <option value="SAP">SAP</option>
+            <option value="PROFESSOR">PROFESSOR</option>
+            <option value="AD">AD</option>
+            <option value="DEAN">DEAN</option>
+          </select>
+          <label>Choose your designation</label>        
+        </div>
+        <div class="input-field col s6">
+          <input id="edu_qual" type="text" class="validate">
+          <label for="edu_qual">Educational Qualification (Separated by commas)</label>
+        </div>        
+        <div class="input-field col s6">
+          <input id="area" type="text" class="validate">
+          <label for="area">Areas if Interest (Separated by commas)</label>
+        </div>
+        <div class="input-field col s6">
+          <select id="school">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="SOC">SOC</option>
+            <option value="SOME">SOME</option>
+            <option value="SEEE">SEEE</option>
+            <option value="SCBT">SCBT</option>
+          </select>
+          <label>Choose your school</label>        
+        </div>
+         <button class="btn waves-effect waves-light" type="button" id="actionRegister" name="actionRegister">Register
+            <i class="material-icons right">send</i>
+         </button>
+  
+</body>
+</html>
